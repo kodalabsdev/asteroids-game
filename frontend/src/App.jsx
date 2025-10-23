@@ -82,6 +82,10 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       gameStateRef.current.keys[e.key.toLowerCase()] = true
+      // Prevent default behavior for game keys
+      if (e.key === ' ') {
+        e.preventDefault()
+      }
     }
 
     const handleKeyUp = (e) => {
@@ -283,7 +287,10 @@ function App() {
               <button onClick={saveScoreHandler} disabled={isSaving}>
                 {isSaving ? 'Saving...' : 'Save Score'}
               </button>
-              <button onClick={() => setGameOver(true)}>Skip</button>
+              <button onClick={() => {
+                setGameOver(true)
+                setShowScoreForm(false)
+              }}>Skip</button>
             </div>
           </div>
         )}
