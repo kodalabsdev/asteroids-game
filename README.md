@@ -37,10 +37,10 @@ Before running this application, make sure you have the following installed:
 ## Installation
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ninjarob/asteroids-game.git
-   cd asteroids-game
-   ```
+  ```bash
+  git clone https://github.com/kodalabsdev/asteroids-game.git
+  cd asteroids-game
+  ```
 
 2. **Install backend dependencies:**
    ```bash
